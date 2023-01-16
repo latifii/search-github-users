@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
     login: 'ThaELL1',
@@ -673,4 +674,4 @@ export default [
     type: 'User',
     site_admin: false,
   },
-];
+]
