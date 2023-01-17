@@ -8,9 +8,7 @@ import { useGlobalContext } from '../context/context'
 
 const UserInfo = () => {
   const { githubUser } = useGlobalContext()
-  console.log(githubUser)
   const { public_repos, followers, following, public_gists } = githubUser
-  console.log(public_repos, followers)
   const items = [
     {
       id: 1,
@@ -46,17 +44,7 @@ const UserInfo = () => {
     <section className='section'>
       <Wrapper className='section-center'>
         {items.map((item) => {
-          // const { icon, label, value, color } = item
           return <InfoItem key={item.id} {...item} />
-          // return (
-          //   <article className='item'>
-          //     <span className={color}>{icon}</span>
-          //     <div>
-          //       <h3>{value}</h3>
-          //       <p>{label}</p>
-          //     </div>
-          //   </article>
-          // )
         })}
       </Wrapper>
     </section>
