@@ -47,7 +47,6 @@ const GithubProvider = ({ children }) => {
         axios(`${followers_url}?per_page=100`),
       ])
         .then((results) => {
-          console.log('resuls promise', results)
           const status = 'fulfilled'
           const [respo, followers] = results
           if (respo.status === status) {
@@ -72,7 +71,9 @@ const GithubProvider = ({ children }) => {
   useEffect(() => {
     checkRequest()
   }, [])
-
+  useEffect(() => {
+    searchUser('jadijadi')
+  }, [])
   return (
     <GithubContext.Provider
       value={{

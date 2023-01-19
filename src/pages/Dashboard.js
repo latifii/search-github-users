@@ -1,6 +1,6 @@
 import React from 'react'
-import { Info, Repos, User, Search, Navbar, Error } from '../components'
-import loadingImage from '../images/preloader.gif'
+import { Info, Repos, User, Search, Navbar, Loading } from '../components'
+
 import { useGlobalContext } from '../context/context'
 const Dashboard = () => {
   const { loading } = useGlobalContext()
@@ -9,7 +9,7 @@ const Dashboard = () => {
       <main>
         <Navbar />
         <Search />
-        <Error />
+        <Loading />
       </main>
     )
   }
