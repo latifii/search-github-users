@@ -68,9 +68,8 @@ const GithubProvider = ({ children }) => {
     setError({ show, msg })
   }
 
-  useEffect(() => {
-    checkRequest()
-  }, [])
+  useEffect(checkRequest, [])
+
   useEffect(() => {
     searchUser('jadijadi')
   }, [])
